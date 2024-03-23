@@ -19,7 +19,7 @@ public class Jugador {
         this.columna = columnaI;
     }
     
-    public void mover(char[][] mapa, char ubicacion) {
+ void mover(int[][] mapa, char ubicacion) {
         
         int filaNueva = fila;
         int columnaNueva = columna;
@@ -35,7 +35,23 @@ public class Jugador {
                 break;
             default:
                 System.out.println("Use solo w: para moverse arriba " + "\n s: para moverse abajo"+ "\n a: para moverse a la izquierda" + "\n d: para moverse a la derecha");
+                
+                return;
+      
+        
         }    
+        
+         // ver si no se sale del mapa :P primero dios funciona 
+                
+                if (filaNueva >= 0 && filaNueva < mapa.length && columnaNueva >= 0 && columnaNueva < mapa[0].length ) {
+                  
+                    this.fila = filaNueva;
+                    this.columna = columnaNueva;
+                    
+                } else {
+                    
+                    System.out.println("no puedes moverte fuera del mapa");
+                }
     
 }
     
@@ -55,8 +71,14 @@ public class Jugador {
             
         }
 
-    void mover(int[][] mapa, char direccion) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    private static void mostrarPosicionActual(char [][]mapa){
+        
+        for (int i = 0; i < mapa.length; i++) {
+            for (int j = 0; j < mapa[i].length; j++) {
+                System.out.println(mapa[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
   
     

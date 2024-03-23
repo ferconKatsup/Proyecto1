@@ -42,9 +42,12 @@ public class Mapas {
             mostrarMapa(mapa);
             mapa[jugador.getFila()][jugador.getColumna()] = VACIA;
 
+            
+            
+           
             System.out.println("Para moverse dentro del mapa use el sistema wsad donde:" + "\n w: para moverse arriba " + "\n s: para moverse abajo"+ "\n a: para moverse a la izquierda" + "\n d: para moverse a la derecha");
             char direccion = scanner.next().charAt(0);
-            jugador.mover(mapa, direccion);
+             jugador.mover(mapa, direccion);
         }
 
        
