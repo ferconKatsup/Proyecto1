@@ -3,6 +3,7 @@
  */
 package com.mycompany.primerproyecto;
 
+import com.mycompany.primerproyecto.mapa.Mapas;
 import java.util.Scanner;
 
 /**
@@ -32,7 +33,7 @@ public class PrimerProyecto {
                     // llamar mapa modo historia
                     System.out.println("---*Iniciar Partida*---");
                  Mapas mapaHistoria = new Mapas();
-                Mapas.mapaHistoria();
+                mapaHistoria.mapaHistoria();
                     break;
                 case 2: // llamar menu tienda
                     System.out.println("---*tienda*---");

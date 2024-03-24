@@ -1,3 +1,9 @@
-com\mycompany\primerproyecto\Mapas.class
+com\mycompany\primerproyecto\mapa\ciudad\Ciudad.class
 com\mycompany\primerproyecto\PrimerProyecto.class
-com\mycompany\primerproyecto\Jugador.class
+com\mycompany\primerproyecto\mapa\ciudad\Caballero.class
+com\mycompany\primerproyecto\mapa\personaje\Personaje.class
+Estadisticas\Estadisticas.class
+com\mycompany\primerproyecto\mapa\Mapas.class
+com\mycompany\primerproyecto\mapa\Casilla.class
+com\mycompany\primerproyecto\mapa\InteraccionConElementos.class
+com\mycompany\primerproyecto\mapa\Jugador.class
