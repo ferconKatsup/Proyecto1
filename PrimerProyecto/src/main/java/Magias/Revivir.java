@@ -4,17 +4,32 @@
  */
 package Magias;
 
+import java.util.Random;
+
 /**
  *
  * @author fer
  */
 public class Revivir extends MagiaBlanca {
-    
-    public Revivir() {
-        super("Revivir", 5, 3, 60);
-    }
-    
+    private static final int MIN_CURACION = 10;
+    private static final int MAX_CURACION = 20;
 
-    
-    
+    public Revivir(String nombre, int nivelRequerido, int usosRestantes) {
+        super(nombre, nivelRequerido, usosRestantes);
+    }
+
+    public void usar() {
+        if (usosRestantes > 0) {
+            System.out.println("Usando magia Revivir: " + nombre);
+            // Simular el cálculo de curación aleatoria
+            Random random = new Random();
+            int curacion = random.nextInt(MAX_CURACION - MIN_CURACION + 1) + MIN_CURACION;
+            // Restar un uso
+            reducirUsos();
+            System.out.println("Cantidad de curación al revivir: " + curacion);
+            // Implementación específica para la magia Revivir
+        } else {
+            System.out.println("La magia " + nombre + " no tiene usos restantes.");
+        }
+    }
 }

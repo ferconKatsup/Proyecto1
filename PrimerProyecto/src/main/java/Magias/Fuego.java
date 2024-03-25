@@ -10,25 +10,25 @@ import java.util.Random;
  *
  * @author fer
  */
-public class Coraza extends MagiaBlanca {
-    private static final int MIN_TURNOS = 2;
-    private static final int MAX_TURNOS = 4;
+public class Fuego extends MagiaOscura {
+    private static final int MIN_DAÑO = 10;
+    private static final int MAX_DAÑO = 20;
 
-    public Coraza(String nombre, int nivelRequerido, int usosRestantes) {
+    public Fuego(String nombre, int nivelRequerido, int usosRestantes) {
         super(nombre, nivelRequerido, usosRestantes);
     }
 
-
+    @Override
     public void usar() {
         if (usosRestantes > 0) {
-            System.out.println("Usando magia Coraza: " + nombre);
-            // Simular el cálculo de turnos aleatorios
+            System.out.println("Usando magia Fuego: " + nombre);
+            // Simular el cálculo de daño aleatorio
             Random random = new Random();
-            int turnos = random.nextInt(MAX_TURNOS - MIN_TURNOS + 1) + MIN_TURNOS;
+            int daño = random.nextInt(MAX_DAÑO - MIN_DAÑO + 1) + MIN_DAÑO;
             // Restar un uso
             reducirUsos();
-            System.out.println("Duración de la Coraza: " + turnos + " turnos");
-            // Implementación específica para la magia Coraza
+            System.out.println("Cantidad de daño causado por Fuego: " + daño);
+            // Implementación específica para la magia Fuego
         } else {
             System.out.println("La magia " + nombre + " no tiene usos restantes.");
         }

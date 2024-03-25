@@ -8,54 +8,38 @@ package Magias;
  *
  * @author fer
  */
-public class Magia {
-    
-    private String nombre;
-    private int puntosDeUso;
-    private int precio;
+
+    public abstract class Magia {
+        
+    protected String nombre;
     protected int nivelRequerido;
     protected int usosRestantes;
 
-    
-    public Magia(String nombre, int puntosDeUso, int nivel, int precio, int nivelRequerido, int usosRestantes){
+    public Magia(String nombre, int nivelRequerido, int usosRestantes) {
         this.nombre = nombre;
-        this.puntosDeUso = puntosDeUso;
         this.nivelRequerido = nivelRequerido;
         this.usosRestantes = usosRestantes;
-        this.precio = precio;
-       
-        
-        
-    }
-    
-    
-    public String getNombre(){
-        return nombre;
-    }
-    public String getPuntosDeUso(){
-        return getPuntosDeUso();
-    }
-    
-    public String getNivel(){
-        return getNivel();
-    }
-    
-    public String getPrecio(){
-        return getPrecio();
-    }
-    public  String getNivelRequerido(){
-        return getNivelRequerido();
-    }
-    
-    public String getUsosRestantes(){
-        return getUsosRestantes();
     }
 
-    
-    //usar magia 
-    
-    public void usar(){
+    public abstract void usar();
+
+    protected void reducirUsos() {
+        usosRestantes--;
     }
+
+    public int getUsosRestantes() {
+        return usosRestantes;
+    }
+
+    public String getNombre() {
+             return getNombre();
+
+    }
+
+    public int getPrecio() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+}
     
     
     
@@ -63,5 +47,3 @@ public class Magia {
     
     
     
-    
-}// fin clase

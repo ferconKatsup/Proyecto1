@@ -8,11 +8,30 @@ package com.mycompany.primerproyecto.mapa.personaje;
  *
  * @author fer
  */
-
-//SuperClase
 public class Personaje {
-    
+
     private String nombre;
-    private int nivel;
-    private int experiencia;
+    private Trabajo trabajoActual;
+
+    public Personaje(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void cambiarTrabajo(Trabajo nuevoTrabajo) {
+        this.trabajoActual = nuevoTrabajo;
+        aplicarModificadoresDeEstadisticas();
+    }
+
+    public void activarHabilidadEspecial() {
+        if (trabajoActual != null) {
+            trabajoActual.habilidadEspecial(this);
+        }
+    }
+
+    public void aplicarModificadoresDeEstadisticas() {
+        if (trabajoActual != null) {
+            trabajoActual.aplicarModificadores(this);
+        }
+    }
+
 }
