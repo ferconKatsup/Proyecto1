@@ -1,6 +1,6 @@
 package com.mycompany.primerproyecto.mapa.ciudad;
 
-import Estadisticas.Estadisticas;
+import com.mycompany.primerproyecto.Estadisticas;
 import java.util.Random;
 
 class Caballero {

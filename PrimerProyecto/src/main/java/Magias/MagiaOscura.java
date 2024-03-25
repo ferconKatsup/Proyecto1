@@ -10,6 +10,9 @@ package Magias;
  */
 public class MagiaOscura extends Magia {
     
+    public MagiaOscura(String nombre, int puntosDeUso, int nivel) {
+        super(nombre, puntosDeUso, nivel);
+    }
     
-    
+   
 }

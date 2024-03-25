@@ -8,10 +8,9 @@ package Magias;
  *
  * @author fer
  */
-public class MagiaBlanca extends Magia{
-  
-    public MagiaBlanca(String nombre, int puntosDeUso, int nivel) {
-        super(nombre, puntosDeUso, nivel);
-    }
+public class Cura extends MagiaBlanca {
     
-  }
+    public Cura(){
+        super("Cura", 6, 2);
+    }
+}

@@ -12,17 +12,15 @@ import java.util.Scanner;
  */
 public class PrimerProyecto {
 
-
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("---Menu Inicial---");
-        int opncionMenuInicial;
-        
-           int salir = 0;
-                
+        int opncionMenuInicial = 0;
+
+        int salir = 0;
+
         while (salir != 4) {
 
             System.out.println("1.iniciar partida \n 2.tienda \n 3. \n 4.cerrr programa");
@@ -32,11 +30,12 @@ public class PrimerProyecto {
                 case 1:
                     // llamar mapa modo historia
                     System.out.println("---*Iniciar Partida*---");
-                 Mapas mapaHistoria = new Mapas();
-                mapaHistoria.mapaHistoria();
+                    Mapas mapaHistoria = new Mapas();
+                    mapaHistoria.mapaHistoria();
                     break;
                 case 2: // llamar menu tienda
                     System.out.println("---*tienda*---");
+               
                     break;
                 case 3: // llamar 2048
                     System.out.println("---*Ver Repostes*---");
@@ -45,9 +44,10 @@ public class PrimerProyecto {
                     scanner.close();
                     salir = 4;
                     break;
-            }
-            
+                default: System.out.println("ingresaste una opcion incorrecta");
+            } 
+
         }
 
-    }//cierra main
-}//cierra clase
+    }
+}

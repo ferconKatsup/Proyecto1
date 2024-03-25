@@ -4,10 +4,14 @@
  */
 package com.mycompany.primerproyecto.mapa;
 
-import Estadisticas.Estadisticas;
+import com.mycompany.primerproyecto.Inventario;
+import Magias.Magia;
+import com.mycompany.primerproyecto.Estadisticas;
 import com.mycompany.primerproyecto.mapa.Casilla;
 import com.mycompany.primerproyecto.mapa.Casilla;
 import com.mycompany.primerproyecto.mapa.Casilla;
+import com.mycompany.primerproyecto.mapa.Casilla;
+import com.mycompany.primerproyecto.mapa.InteraccionConElementos;
 import com.mycompany.primerproyecto.mapa.InteraccionConElementos;
 import com.mycompany.primerproyecto.mapa.InteraccionConElementos;
 import java.util.Random;
@@ -20,13 +24,23 @@ public class Jugador {
 
     private int fila;
     private int columna;
+    private int nivel;
+    private Estadisticas estadisticas;
+    private Inventario inventario;
+    private int oro;
+    
 
     //posicionInicial
     public Jugador(int filaI, int columnaI) {
         this.fila = filaI;
         this.columna = columnaI;
+        this.nivel = 1;
+        this.estadisticas = new Estadisticas(1, 10, 5, 5, 5, 5, 100);
+        this.inventario = new Inventario(10);
+         this.oro = oro;
+        
     }
-
+    
     void mover(Casilla[][] mapa, char ubicacion) {
 
         int filaNueva = fila;
@@ -88,36 +102,71 @@ public class Jugador {
         }
     }
 
-    private int nivel;
-    private Estadisticas estadisticas;
-
     public Estadisticas getEstadisticas() {
         return estadisticas;
     }
 
     public int atacar() {
 
-        
         // para calcular el daño segun la fuerza del jugador usuario
         int dañoInfligido = estadisticas.getFuerza();
-        
-        dañoInfligido += (int)(Math.random() * 10);
-        
-      
+
+        dañoInfligido += (int) (Math.random() * 10);
+
         return dañoInfligido;
 
     }
 
     public void recibirDaño(int dañoRecibido) {
-       
+
         //reducir los puntos de vida
         estadisticas.setPuntosDeVida(estadisticas.getPuntosDeVida() - dañoRecibido);
-        
+
         // si es derrotado 
-        
-        if (estadisticas.getPuntosDeVida() <= 0){
+        if (estadisticas.getPuntosDeVida() <= 0) {
             System.out.println("fuiste derrotado");
         }
     }
+    
+    
+    ////////
+    
+    // Método para agregar una magia al inventario del jugador
+    public boolean agregarMagia(Magia magia) {
+        return inventario.agregarMagia(magia);
+    }
 
+    // Método para eliminar una magia del inventario del jugador
+    public boolean eliminarMagia(Magia magia) {
+        return inventario.eliminarMagia(magia);
+    }
+
+    // Método para mostrar el inventario de magias del jugador
+    public void mostrarInventario() {
+        inventario.mostrarInventario();
+    }
+    
+
+    public void mostrarOro() {
+        System.out.println("Oro disponible: " + this.oro);
+    }
+    
+     public int getOro() {
+        return oro;
+    }
+
+    public void agregarOro(int cantidad) {
+        this.oro += cantidad;
+    }
+
+public boolean gastarOro(int cantidad) {
+        if (this.oro >= cantidad) {
+            this.oro -= cantidad;
+            return true;
+        } else {
+            System.out.println("No tienes suficiente oro.");
+            return false;
+        }
+    }
+   
 }//finclase

@@ -33,7 +33,7 @@ public class Mapas {
         inicializarMapa(mapa);
 
         //JUGADOR 
-        Jugador jugador = new Jugador(0, 0);
+        Jugador jugador = new Jugador(0,0);
         Scanner scanner = new Scanner(System.in);
         InteraccionConElementos interaccion = new InteraccionConElementos();
 
@@ -53,7 +53,7 @@ public class Mapas {
 
             if (fila >= 0 && fila < filas && columna >= 0 && columna < columnas) {
                 Casilla casilla = mapa[fila][columna];
-                interaccion.interactuar(casilla, jugador);
+                interaccion.interactuar(casilla, jugador); // Pasa la lista de magias disponibles al método interactuar()
             } else {
                 System.out.println("¡Te saliste del mapa!");
             }
