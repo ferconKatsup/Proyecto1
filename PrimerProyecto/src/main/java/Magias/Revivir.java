@@ -8,13 +8,13 @@ package Magias;
  *
  * @author fer
  */
-public class MagiaOscura extends Magia {
-   
-    public MagiaOscura(String nombre, int puntosDeUso, int nivel, int precio, int nivelRequerido, int usosRestantes) {
-        super(nombre, puntosDeUso, nivel, precio, nivelRequerido, usosRestantes);
-    }
-   
+public class Revivir extends MagiaBlanca {
     
-   
-   
+    public Revivir() {
+        super("Revivir", 5, 3, 60);
+    }
+    
+
+    
+    
 }

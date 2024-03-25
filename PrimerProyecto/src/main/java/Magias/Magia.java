@@ -12,15 +12,18 @@ public class Magia {
     
     private String nombre;
     private int puntosDeUso;
-    private int nivel;
     private int precio;
+    protected int nivelRequerido;
+    protected int usosRestantes;
+
     
-    
-    public Magia(String nombre, int puntosDeUso, int nivel){
+    public Magia(String nombre, int puntosDeUso, int nivel, int precio, int nivelRequerido, int usosRestantes){
         this.nombre = nombre;
         this.puntosDeUso = puntosDeUso;
-        this.nivel = nivel;
+        this.nivelRequerido = nivelRequerido;
+        this.usosRestantes = usosRestantes;
         this.precio = precio;
+       
         
         
     }
@@ -37,8 +40,15 @@ public class Magia {
         return getNivel();
     }
     
-    public int getPrecio(){
+    public String getPrecio(){
         return getPrecio();
+    }
+    public  String getNivelRequerido(){
+        return getNivelRequerido();
+    }
+    
+    public String getUsosRestantes(){
+        return getUsosRestantes();
     }
 
     

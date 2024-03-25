@@ -8,7 +8,7 @@ package com.mycompany.primerproyecto.mapa;
 import Magias.Magia;
 import com.mycompany.primerproyecto.mapa.Casilla;
 import com.mycompany.primerproyecto.mapa.Mapas;
-import com.mycompany.primerproyecto.mapa.ciudad.tienda.tiendita;
+import com.mycompany.primerproyecto.mapa.ciudad.tiendita;
 
 /**
  *
@@ -26,7 +26,8 @@ public class InteraccionConElementos {
                 break;
             case Mapas.TIENDA:
                 System.out.println("Te topaste con una tienda!");
-          
+          tiendita tienda = new tiendita (jugador,jugador);
+                tienda.mostrarMenu();
                 break;
             case Mapas.POSADA:
                 System.out.println("Te topaste con una posada!");

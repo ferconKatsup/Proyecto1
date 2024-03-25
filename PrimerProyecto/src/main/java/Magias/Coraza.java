@@ -8,13 +8,6 @@ package Magias;
  *
  * @author fer
  */
-public class Cura extends MagiaBlanca {
-     
-
-    public Cura() {
-        
-    }
-     
-  
-     
+public class Coraza extends MagiaBlanca {
+    
 }
