@@ -4,7 +4,6 @@
  */
 package com.mycompany.primerproyecto.mapa;
 
-import com.mycompany.primerproyecto.mapa.Jugador;
 import com.mycompany.primerproyecto.mapa.Casilla;
 import com.mycompany.primerproyecto.mapa.Mapas;
 
@@ -19,7 +18,9 @@ public class InteraccionConElementos {
         
         switch (elemento) {
             case Mapas.CIUDAD:
-                System.out.println("Te topaste con una ciudad!");
+                System.out.println("Haz encontrado una ciudad, esta es la ciudad de Alexandria" + "\n ¡Inicia la batealla!" + "\n Debes derrotar a los caballeros para reconquistar esta ciudad ¡Usa tus mejores habilidades!" + "\n ¡Qué la mejor de las suertes te acompañe !");
+                
+                
                
                 break;
             case Mapas.TIENDA:

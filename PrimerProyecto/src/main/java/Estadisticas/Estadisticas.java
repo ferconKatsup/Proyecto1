@@ -33,7 +33,7 @@ public class Estadisticas {
     }
 
 //mostrar y establecer valores de stats 
-    public int getNivel(int nivel) {
+    public int getNivel() {
         return nivel;
     }
 
@@ -41,7 +41,7 @@ public class Estadisticas {
         this.nivel = nivel;
     }
 
-    public int getFuerza(int fuerza) {
+    public int getFuerza() {
         return fuerza;
     }
 
@@ -49,7 +49,7 @@ public class Estadisticas {
         this.fuerza = fuerza;
     }
 
-    public int getDefensa(int defensa) {
+    public int getDefensa() {
         return defensa;
     }
 
@@ -57,7 +57,7 @@ public class Estadisticas {
         this.defensa = defensa;
     }
 
-    public int getConcentracion(int concentracion) {
+    public int getConcentracion() {
         return concentracion;
     }
 
@@ -65,7 +65,7 @@ public class Estadisticas {
         this.concentracion = concentracion;
     }
 
-    public int getVelocidad(int velocidad) {
+    public int getVelocidad() {
         return velocidad;
     }
 
@@ -73,7 +73,7 @@ public class Estadisticas {
         this.velocidad = velocidad;
     }
 
-    public int getPuntosDeVida(int puntosDeVida) {
+    public int getPuntosDeVida() {
         return puntosDeVida;
     }
 
@@ -81,7 +81,7 @@ public class Estadisticas {
         this.puntosDeVida = puntosDeVida;
     }
 
-    public int getPuntosDeExp(int puntosDeExp) {
+    public int getPuntosDeExp() {
         return puntosDeExp;
     }
 

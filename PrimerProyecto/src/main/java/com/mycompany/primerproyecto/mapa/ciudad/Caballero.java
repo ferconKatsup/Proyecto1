@@ -1,32 +1,37 @@
 package com.mycompany.primerproyecto.mapa.ciudad;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author fer
- */
+import Estadisticas.Estadisticas;
+import java.util.Random;
 
 class Caballero {
-   
-   private String caballeroOscuro;
+
+    private String caballeroOscuro;
     private int nivel;
-    private int puntosDeVida;
-    private int puntosDeMagia;
-    
-    public Caballero(String caballeroOscuro, int nivel){
-        
-        System.out.println("caballeroOOo");
-        
+    private Estadisticas estadisticas;
+
+    public Caballero(String caballeroOscuro, Estadisticas estadisticas) {
+        this.caballeroOscuro = caballeroOscuro;
+        this.estadisticas = estadisticas;
+
     }
-    
-    
-   
-    
-    
-    
-    
+
+    public String getcaballeroOscuro() {
+        return caballeroOscuro;
+    }
+
+    public Estadisticas getEstadisticas() {
+        return estadisticas;
+    }
+
+    public int atacar() {
+
+        Random rand = new Random();
+        return rand.nextInt(estadisticas.getFuerza());
+
+    }
+
+    public void recibirDaño(int dañoRecibido) {
+        estadisticas.recibirDaño(dañoRecibido);
+    }
+
 } //FINCLASE

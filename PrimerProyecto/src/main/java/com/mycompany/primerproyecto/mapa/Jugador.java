@@ -4,7 +4,13 @@
  */
 package com.mycompany.primerproyecto.mapa;
 
+import Estadisticas.Estadisticas;
 import com.mycompany.primerproyecto.mapa.Casilla;
+import com.mycompany.primerproyecto.mapa.Casilla;
+import com.mycompany.primerproyecto.mapa.Casilla;
+import com.mycompany.primerproyecto.mapa.InteraccionConElementos;
+import com.mycompany.primerproyecto.mapa.InteraccionConElementos;
+import java.util.Random;
 
 /**
  *
@@ -53,9 +59,8 @@ public class Jugador {
                 InteraccionConElementos interaccion = new InteraccionConElementos();
                 interaccion.interactuar(mapa[filaNueva][columnaNueva], this);
             }
-  
 
-        }  else{
+        } else {
             System.out.println("no puedes moverte por aqui ");
         }
 
@@ -80,6 +85,38 @@ public class Jugador {
                 System.out.println(mapa[i][j] + " ");
             }
             System.out.println();
+        }
+    }
+
+    private int nivel;
+    private Estadisticas estadisticas;
+
+    public Estadisticas getEstadisticas() {
+        return estadisticas;
+    }
+
+    public int atacar() {
+
+        
+        // para calcular el daño segun la fuerza del jugador usuario
+        int dañoInfligido = estadisticas.getFuerza();
+        
+        dañoInfligido += (int)(Math.random() * 10);
+        
+      
+        return dañoInfligido;
+
+    }
+
+    public void recibirDaño(int dañoRecibido) {
+       
+        //reducir los puntos de vida
+        estadisticas.setPuntosDeVida(estadisticas.getPuntosDeVida() - dañoRecibido);
+        
+        // si es derrotado 
+        
+        if (estadisticas.getPuntosDeVida() <= 0){
+            System.out.println("fuiste derrotado");
         }
     }
 
