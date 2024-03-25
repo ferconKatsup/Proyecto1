@@ -8,7 +8,7 @@ package Magias;
  *
  * @author fer
  */
-public abstract class Magia {
+public class Magia {
     
     private String nombre;
     private int puntosDeUso;
@@ -32,7 +32,10 @@ public abstract class Magia {
         return getPrecio();
     }
     
+    //usar magia 
     
+    public void usar(){
+    }
     
     
     
